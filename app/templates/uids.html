@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="" method="post" name="uids">
+    {{form.hidden_tag()}}
+    <p>Enter comma-separated list of UIDs to look up
+    {{form.uids(size=80)}}
+    </p>
+    <p><input type="submit" value="submit"></p>
+    </form>
+{% endblock %}

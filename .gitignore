@@ -1,0 +1,9 @@
+*.pyc
+*.swp
+tmp/
+virtenv/
+src/flask/
+flask/
+config.py
+config.json
+etc/overrides.yaml

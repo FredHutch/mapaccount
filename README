@@ -1,0 +1,23 @@
+INSTALLATION:
+
+make all
+
+creates the virtualenv, installs necessary modules.
+
+make install-config
+
+puts a template (filling in a random value for the CSRF key) into the necessary location.  You will need to fill in the LDAP bind information.
+
+service
+
+copy hutchnet.conf to /etc/init and tell upstart:
+    initctl reload-configuration
+
+then you can use service to control the "hutchnet" service
+
+NOTES:
+
+(14 April 2014) the version of flask in pip doesn't have the JSON interpreter
+for configuration files. Thus, we're calling out to flask source on github to
+get the most current.
+
